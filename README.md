@@ -74,6 +74,14 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
+      <a href="https://github.com/GMilaniMota">
+        <img src="https://github.com/GMilaniMota.png" width="100px;" alt="Foto de Gustavo Milani"/><br>
+        <sub>
+          <b>Gustavo Milani</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
       <a href="#">
         <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGLqbLXaniGLA/profile-displayphoto-shrink_200_200/0/1619828596569?e=1660176000&v=beta&t=dnK408gIdQUJj93B4O7RefP34hyajC4238OYdvQM7HU" width="100px;" alt="Foto de Lucas Eduardo"/><br>
         <sub>
@@ -86,10 +94,10 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 ## 😄 Seja um dos contribuidores<br>
 
-Quer fazer parte desse projeto? Clique [AQUI](#📫-contribuindo-para-calculadora)) e leia como contribuir.
+Quer fazer parte desse projeto? Clique [AQUI] e leia como contribuir.
 
 ## 📝 Licença
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
 
-[⬆ Voltar ao topo](#calculadora---si-03)<br>
+[⬆ Voltar ao topo]<br>
