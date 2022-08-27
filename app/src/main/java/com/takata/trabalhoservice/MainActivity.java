@@ -9,14 +9,12 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.SeekBar;
 import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
 
-    SeekBar seekBar;
-    TextView TextViewLumLvl;
+    private TextView TextViewLumLvl;
     private SensorManager sensorManager;
     private Sensor light;
 
@@ -26,33 +24,14 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         setContentView(R.layout.activity_main2);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
-
-        seekBar = (SeekBar)findViewById(R.id.SeekBar);
-        TextViewLumLvl = (TextView)findViewById(R.id.TextViewLumLvl);
-
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int lum, boolean b) {
-                TextViewLumLvl.setText(String.valueOf(lum));
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-
     }
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        float value = sensorEvent.values[0];
-        Log.i("SENSOR", String.valueOf(value));
+        TextViewLumLvl = (TextView)findViewById(R.id.TextViewLumLvl);
+        float value = sensorEvent.values[0] / 400;
+
+        TextViewLumLvl.setText(String.valueOf(value) + '%');
     }
 
     @Override
