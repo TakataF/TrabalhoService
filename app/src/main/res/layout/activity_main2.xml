@@ -3,10 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/TextViewLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="240dp"
+        android:text="Luminosidade:"
+        android:textColor="@color/black"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/TextViewLumLvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="50"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
+
     <SeekBar
-        android:id="@+id/Bar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:max="100"
+        android:progress="50"
+        android:id="@+id/SeekBar"/>
 
 </LinearLayout>
