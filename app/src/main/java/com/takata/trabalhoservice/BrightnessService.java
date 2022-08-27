@@ -63,7 +63,7 @@ public class BrightnessService extends Service implements SensorEventListener {
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             mNotificationManager.notify(1, mBuilder.build());
 
-        } else if (valuePercent == 69) {
+        } else if (valuePercent >= 68.1 && valuePercent <= 69.9 ) {
             NotificationCompat.Builder mBuilder =
                     new NotificationCompat.Builder(getApplicationContext(), "SENSOR")
                             .setSmallIcon(R.drawable.ic_launcher_background)
