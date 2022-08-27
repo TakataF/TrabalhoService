@@ -4,8 +4,8 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-public class BightnessService extends Service {
-    public BightnessService() {
+public class BrightnessService extends Service {
+    public BrightnessService() {
     }
 
     @Override

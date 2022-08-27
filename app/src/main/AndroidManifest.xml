@@ -14,10 +14,9 @@
         android:theme="@style/Theme.TrabalhoService"
         tools:targetApi="31">
         <service
-            android:name=".BightnessService"
+            android:name=".BrightnessService"
             android:enabled="true"
             android:exported="true"></service>
-        <service android:name=".BightnessService" />
 
         <activity
             android:name=".MainActivity"
