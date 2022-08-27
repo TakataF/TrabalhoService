@@ -37,8 +37,8 @@ public class BrightnessService extends Service implements SensorEventListener {
             NotificationCompat.Builder mBuilder =
                     new NotificationCompat.Builder(getApplicationContext(), "SENSOR")
                             .setSmallIcon(R.drawable.ic_launcher_background)
-                            .setContentTitle("Seu sensor chegou perto do negão")
-                            .setContentText("CUIDADO!")
+                            .setContentTitle("Atenção! Luminosidade abaixo de 10%!")
+                            .setContentText("Está muito escuro no local.")
                             .setAutoCancel(true);
             Intent resultIntent = new Intent(getApplicationContext(), MainActivity.class);
             TaskStackBuilder stackBuilder = TaskStackBuilder.create(getApplicationContext());
@@ -47,6 +47,36 @@ public class BrightnessService extends Service implements SensorEventListener {
             NotificationManager mNotificationManager =
                     (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
             mNotificationManager.notify(0, mBuilder.build());
+
+        } else if (valuePercent >= 80) {
+            NotificationCompat.Builder mBuilder =
+                    new NotificationCompat.Builder(getApplicationContext(), "SENSOR")
+                            .setSmallIcon(R.drawable.ic_launcher_background)
+                            .setContentTitle("Atenção! Luminosidade acima de 80%!")
+                            .setContentText("Está bem claro no local")
+                            .setAutoCancel(true);
+            Intent resultIntent = new Intent(getApplicationContext(), MainActivity.class);
+            TaskStackBuilder stackBuilder = TaskStackBuilder.create(getApplicationContext());
+            stackBuilder.addParentStack(MainActivity.class);
+            stackBuilder.addNextIntent(resultIntent);
+            NotificationManager mNotificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            mNotificationManager.notify(1, mBuilder.build());
+
+        } else if (valuePercent == 69) {
+            NotificationCompat.Builder mBuilder =
+                    new NotificationCompat.Builder(getApplicationContext(), "SENSOR")
+                            .setSmallIcon(R.drawable.ic_launcher_background)
+                            .setContentTitle("Atenção! Luminosidade Perfeita!")
+                            .setContentText("( ͡° ͜ʖ ͡°)")
+                            .setAutoCancel(true);
+            Intent resultIntent = new Intent(getApplicationContext(), MainActivity.class);
+            TaskStackBuilder stackBuilder = TaskStackBuilder.create(getApplicationContext());
+            stackBuilder.addParentStack(MainActivity.class);
+            stackBuilder.addNextIntent(resultIntent);
+            NotificationManager mNotificationManager =
+                    (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+            mNotificationManager.notify(2, mBuilder.build());
         }
     }
 
