@@ -3,12 +3,14 @@ package com.takata.trabalhoservice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 
@@ -21,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = new Intent(this, BrightnessService.class);
+        startService(intent);
         setContentView(R.layout.activity_main2);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
