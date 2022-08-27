@@ -36,7 +36,7 @@ public class BrightnessService extends Service implements SensorEventListener {
         if (valuePercent < 10) {
             NotificationCompat.Builder mBuilder =
                     new NotificationCompat.Builder(getApplicationContext(), "SENSOR")
-                            .setSmallIcon(R.drawable.ic_launcher_background)
+                            .setSmallIcon(R.drawable.baseline_light_mode_20)
                             .setContentTitle("Atenção! Luminosidade abaixo de 10%!")
                             .setContentText("Está muito escuro no local.")
                             .setAutoCancel(true);
@@ -51,7 +51,7 @@ public class BrightnessService extends Service implements SensorEventListener {
         } else if (valuePercent >= 80) {
             NotificationCompat.Builder mBuilder =
                     new NotificationCompat.Builder(getApplicationContext(), "SENSOR")
-                            .setSmallIcon(R.drawable.ic_launcher_background)
+                            .setSmallIcon(R.drawable.baseline_light_mode_20)
                             .setContentTitle("Atenção! Luminosidade acima de 80%!")
                             .setContentText("Está bem claro no local")
                             .setAutoCancel(true);
@@ -66,7 +66,7 @@ public class BrightnessService extends Service implements SensorEventListener {
         } else if (valuePercent >= 68.1 && valuePercent <= 69.9 ) {
             NotificationCompat.Builder mBuilder =
                     new NotificationCompat.Builder(getApplicationContext(), "SENSOR")
-                            .setSmallIcon(R.drawable.ic_launcher_background)
+                            .setSmallIcon(R.drawable.baseline_light_mode_20)
                             .setContentTitle("Atenção! Luminosidade Perfeita!")
                             .setContentText("( ͡° ͜ʖ ͡°)")
                             .setAutoCancel(true);
